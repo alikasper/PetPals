@@ -1,0 +1,30 @@
+img#logo {
+    display: block;
+    margin: 25px auto 50px auto;
+}
+
+.logoCont {
+    background-image: url("images/cat.jpg");
+    height: 650px;
+    padding: 75px 50px 50px 50px;
+}
+
+.petForm {
+    padding: 50px;
+    margin: 0 auto 0 auto;
+}
+
+.footer {
+    padding: 25px;
+    background-color: #343b3f;
+    color: white;
+    text-align: center;
+}
+
+.footer-logo {
+    margin: 10px;
+}
+
+#copyright {
+    font-size: .5em;
+}
