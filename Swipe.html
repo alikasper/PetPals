@@ -3,19 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>jQuery UI Draggable - Default functionality</title>
+    <title>Pet your Pal!</title>
     <link
       rel="stylesheet"
       href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
     <link rel="stylesheet" href="/resources/demos/style.css" />
-    <style>
-      #draggable {
-        width: 150px;
-        height: 150px;
-        padding: 0.5em;
-      }
-    </style>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
@@ -23,18 +16,19 @@
         $("#draggable").draggable();
       });
     </script>
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="Swipe.css" />
     <script src="Swipe.js"></script>
   </head>
   <body>
     <div>Header goes here</div>
     <div class="container">
+      <div class = "park-container"><img class ="park-image" img src="images/park.png" /></div>
       <div id="draggable" class="ui-widget-content">
         <div class="pet-container">
-          <!-- <p class="pet-container"> -->
-            <!-- <img src="https://i.ytimg.com/vi/TvFBA27NWQ4/maxresdefault.jpg" /> -->
-          <!-- </p> -->
         </div>
+      </div>
+      <div class="house-container">
+        <img class="house-image" src="images/house.jpg" />
       </div>
     </div>
   </body>
