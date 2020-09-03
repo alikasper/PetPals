@@ -35,21 +35,62 @@
         </div>
 
         <div class="petForm container-lg">
-            <form>
-                <p>I'm looking for a ... </p>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1">Cat</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" disabled>
-                    <label class="form-check-label" for="inlineRadio2">Dog</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
-                    <label class="form-check-label" for="inlineRadio3">Small Animal</label>
-                  </div>
-            </form>
+            <img class="img-left" src="images/dog.jpeg" alt="Cute dog getting pets." width="400">
+            <p><b>This is some text about the company.</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="formCont">
+                <form class="no-wrap">
+                    <h2>Create Account</h2>
+                    <br/>
+                    
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail3">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3">
+                        </div>
+                    </div>
+                    
+                    <fieldset class="form-group">
+                        <div class="row">
+                        <legend class="col-form-label col-sm-2 pt-0">I'm looking for</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                                Cats
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                            <label class="form-check-label" for="gridRadios2">
+                                Dogs
+                            </label>
+                            </div>
+                            <div class="form-check disabled">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                            <label class="form-check-label" for="gridRadios3">
+                                Small Animals
+                            </label>
+                            </div>
+                        </div>
+                        </div>
+                    </fieldset>
+                
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>    
         </div>
 
         <div class="footer">

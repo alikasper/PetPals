@@ -14,6 +14,21 @@ img#logo {
     margin: 0 auto 0 auto;
 }
 
+img.img-left {
+    float: left;
+    margin: 0 25px 25px 0;
+}
+
+.formCont {
+    margin-top: 50px;
+    padding: 25px;
+    background-color: lightgray;
+}
+
+.no-wrap {
+    clear: both;
+}
+
 .footer {
     padding: 25px;
     background-color: #343b3f;
