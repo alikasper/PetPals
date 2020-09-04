@@ -5,10 +5,8 @@ $().ready(() => {
     .then((data) => {
       console.log("catimage is loading...");
       console.log(data[0].url);
-      $(".pet-container").append(`
-        <div>
+      $("#draggable").append(`
         <img src="${data[0].url}" />
-        </div>
         `);
     });
 });
