@@ -3,8 +3,8 @@ $(document).ready(() => {
         method: 'post',
         body: JSON.stringify({
             grant_type: "client_credentials",
-            client_id: process.env.pfapiKey,
-            client_secret: process.env.pfapiSecret
+            client_id: pfapiKey,
+            client_secret: pfapiSecret
         }),
         headers: {
             'Content-Type': 'application/json'
