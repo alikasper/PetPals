@@ -29,7 +29,9 @@ img.img-left {
     clear: both;
 }
 
-.footer {
+#footer {
+    clear: both;
+    width: 100%;
     padding: 25px;
     background-color: #343b3f;
     color: white;
@@ -41,5 +43,5 @@ img.img-left {
 }
 
 #copyright {
-    font-size: .5em;
+    font-size: .75em;
 }
