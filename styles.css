@@ -29,9 +29,20 @@ img.img-left {
     clear: both;
 }
 
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+  
+#content-wrap {
+    padding-bottom: 150px;    /* Footer height */
+}
+  
 #footer {
-    clear: both;
+    position: absolute;
+    bottom: 0;
     width: 100%;
+    height: 150px;
     padding: 25px;
     background-color: #343b3f;
     color: white;
