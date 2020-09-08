@@ -1,7 +1,7 @@
 .house-image, .park-image {
-    max-width: 100%;
+    width: 100px;
     height: auto;
-    border-radius: 15%;
+    border: 0;
 }
 
 #draggable img {
@@ -12,7 +12,6 @@
 
 #draggable, .park-container, .house-container {
     width: 20%;
-    border: solid;
     text-align: center;
 }
 

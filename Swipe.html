@@ -15,46 +15,60 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="index.html">
-          <img src="images/paw.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-          PetPals
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="Swipe.html">Swipe</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="matched-list.html">Matches</a>
-          </li>
-        </ul>
-      </div>
-  </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/paw.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            PetPals
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="Swipe.html">Meet</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="matched-list.html">Matches</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
 
-  <div id="page-container">  
-    <div id="content-wrap">
-        <div>Header goes here</div>
-        <div class="container">
-          <div class = "park-container"><img class ="park-image" img src="images/park.png" /></div>
+    <div id="page-container">  
+      <div id="content-wrap">
+
+        <div class="gradient-header">
+          <div class="col-12 header text-center">
+            <h2 class="display-2">Meet PetPals</h2>
+            <h4>If you like a pet, swipe the image to the right and it will be added to your match list. <br />If not, swipe the image left to see a new pet.</h4>
+          </div>
+        </div>
+
+        <div class="container swipe-cont">
+
+          <div class = "park-container">
+            <img class ="park-image" img src="images/red_ex.png" />
+          </div>
+          
           <div id="draggable" class="ui-widget-content">
             <div class="pet-container">
             </div>
           </div>
-          <div class="house-container">
-            <img class="house-image" src="images/house.jpg" />
-          </div>
-      </div>
 
-      <div id="footer">
-        <img class="footer-logo" src="images/paw.png" width="35px">
-        <p id="copyright">&copy; 2020 PetPal</p>
+          <div class="house-container">
+            <img class="house-image" src="images/green_check.png" />
+          </div>
+        
+        </div>
+
+        <div id="footer">
+          <img class="footer-logo" src="images/paw.png" width="35px">
+          <p id="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script> PetPals</p>
+        </div>
+
       </div>
     </div>
-  </div>
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
