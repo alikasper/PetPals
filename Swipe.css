@@ -1,5 +1,5 @@
-.house-image, .park-image {
-    width: 100px;
+.yes-image, .no-image {
+    width: 75px;
     height: auto;
     border: 0;
 }
@@ -10,7 +10,7 @@
     height: auto;
 }
 
-#draggable, .park-container, .house-container {
+#draggable, .no-container, .yes-container {
     width: 20%;
     text-align: center;
 }
