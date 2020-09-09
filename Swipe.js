@@ -19,12 +19,19 @@ $().ready(() => {
           .then(response => response.json())
           .then((data) => {
             // console.log("animals: " + data.animals);
-            data.animals.map(x => catsFromAPI.push(x));
+            data.animals.map((x) => {
+              if(x.photos.length > 0){
+                catsFromAPI.push(x)
+              }
+              else if (x.photos === undefined) {
+              }
+            });
             // console.log("api " + catsFromAPI);
             petSearch = catsFromAPI.pop()
             renderPet(petSearch); 
             let paginationURL = data.pagination._links["next"].href;
             buildPetFinderURL(paginationURL);
+            console.log("just switched to a new page");
 
           })
       })
