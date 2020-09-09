@@ -1,3 +1,5 @@
+var petSearch; 
+
 $().ready(() => {
   console.log("Jquery is loading...");
   // fetch("https://api.thecatapi.com/v1/images/search")
@@ -24,11 +26,13 @@ $().ready(() => {
         .then(response => response.json())
         .then((data) => {
           console.log(data);
+          petSearch = data.animals[0];
+          console.log(petSearch.id);
           $("#draggable").append(`
           <img src="${imageSrc(data.animals[0].photos)}"/>
           <h3>${data.animals[0].name}</h3>
           `);         
-          console.log(imageSrc(data.animals[0].photos))
+          // console.log(imageSrc(data.animals[0].photos))
           // console.log(data)
         })
     })
@@ -41,6 +45,8 @@ $().ready(() => {
   })
 
   $("#submit_yes").on("click", () => {
+    saveToPetList(petSearch);
+    console.log(saveToPetList(petSearch));
     $("#draggable").empty();
     catSwipe();
     console.log("YES")
@@ -49,4 +55,21 @@ $().ready(() => {
   catSwipe();
   $("#draggable").draggable({axis: "x"});
 
+  let petlist;
+
+  function saveToPetList(petSearch){
+	
+    var petlistJSON = localStorage.getItem(petlist);
+    petlist = JSON.parse(petlistJSON);
+
+    if(petlist === null){
+     	petlist = [];
+    }
+
+    petlist.push(petSearch);
+    petlistJSON = JSON.stringify(petlist);
+    localStorage.setItem(petlist, petlistJSON);
+  }
 })
+
+
