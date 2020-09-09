@@ -23,12 +23,13 @@ $().ready(() => {
               if(x.photos.length > 0){
                 catsFromAPI.push(x)
               }
-              else if (x.photos === undefined) {
-              }
             });
-            // console.log("api " + catsFromAPI);
-            petSearch = catsFromAPI.pop()
-            renderPet(petSearch); 
+
+            if (catsFromAPI.length > 0) {
+              petSearch = catsFromAPI.pop()
+              renderPet(petSearch);
+            }
+            
             let paginationURL = data.pagination._links["next"].href;
             buildPetFinderURL(paginationURL);
             console.log("just switched to a new page");
