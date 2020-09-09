@@ -1,4 +1,4 @@
-.yes-image, .no-image {
+.submit_button {
     width: 75px;
     height: auto;
     border: 0;
@@ -11,7 +11,7 @@
 }
 
 #draggable, .no-container, .yes-container {
-    width: 20%;
+    width: 40%;
     text-align: center;
 }
 

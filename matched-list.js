@@ -3,7 +3,7 @@ $(document).ready(() => {
     function renderCatCards() {
         authFunc()
         .then((data) => {
-            console.log(data)
+            // console.log(data)
         
             let token = data.access_token
             fetch("https://api.petfinder.com/v2/animals?type=cat", {
@@ -14,11 +14,11 @@ $(document).ready(() => {
             })
             .then(response => response.json())
             .then((data) => {
-                console.log(data.animals)
+                // console.log(data.animals)
                 function renderPetPals(catsList) {
 
                     let petHTMLs = catsList.map((currentCat) => {
-                        console.log(currentCat);
+                        // console.log(currentCat);
                         return `<div class="pet-card" style="width: 300px;">
                             <img class="pet-card-img-top" src="${imageSrc(currentCat.photos)}" alt="Pet card image cap" height="300px" width="200px">
                             <div class="pet-card-body">

@@ -13,9 +13,9 @@ $().ready(() => {
   function catSwipe() {
     authFunc()
     .then((data) => {
-        console.log(data)
+        // console.log(data)
         let token = data.access_token
-        fetch("https://api.petfinder.com/v2/animals?type=cat", {
+        fetch("https://api.petfinder.com/v2/animals?type=cat&?limit=1", {
             method: 'get',
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -28,9 +28,23 @@ $().ready(() => {
           <img src="${imageSrc(data.animals[0].photos)}"/>
           <h3>${data.animals[0].name}</h3>
           `);         
+          console.log(imageSrc(data.animals[0].photos))
+          // console.log(data)
         })
     })
   }
+
+  $("#submit_no").on("click", () => {
+    $("#draggable").empty();
+    catSwipe();
+    console.log("NO")
+  })
+
+  $("#submit_yes").on("click", () => {
+    $("#draggable").empty();
+    catSwipe();
+    console.log("YES")
+  })
 
   catSwipe();
   $("#draggable").draggable({axis: "x"});
