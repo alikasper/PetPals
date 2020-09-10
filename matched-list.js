@@ -1,12 +1,17 @@
 $(document).ready(() => {
 
+    var petlistJSON = localStorage.getItem('petlist');
+    var petlist = JSON.parse(petlistJSON);
+
+    // console.log(petlist)
+
     function renderCatCards() {
         authFunc()
         .then((data) => {
             // console.log(data)
         
             let token = data.access_token
-            fetch("https://api.petfinder.com/v2/animals?type=cat", {
+            fetch("https://api.petfinder.com/v2/animals", {
                 method: 'get',
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -16,8 +21,9 @@ $(document).ready(() => {
             .then((data) => {
                 // console.log(data.animals)
                 function renderPetPals(catsList) {
+                    // console.log (catsList)
 
-                    let petHTMLs = catsList.map((currentCat) => {
+                    let petHTMLs = petlist.map((currentCat) => {
                         // console.log(currentCat);
                         return `<div class="pet-card" style="width: 300px;">
                             <img class="pet-card-img-top" src="${imageSrc(currentCat.photos)}" alt="Pet card image cap" height="300px" width="200px">

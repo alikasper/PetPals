@@ -62,8 +62,7 @@ $().ready(() => {
   })
 
   $("#submit_yes").on("click", () => {
-   // saveToPetList(petSearch);
-    //console.log(saveToPetList(petSearch));
+    saveToPetList(petSearch);
     $("#draggable").empty();
     catSwipe();
     console.log("YES")
@@ -72,21 +71,20 @@ $().ready(() => {
   catSwipe();
   $("#draggable").draggable({axis: "x"});
 
-  // let petlist;
+  function saveToPetList(petSearch) {
 
-  // function saveToPetList(petSearch){
-	
-  //   var petlistJSON = localStorage.getItem(petlist);
-  //   petlist = JSON.parse(petlistJSON);
+    var petlistJSON = localStorage.getItem('petlist');
+    var petlist = JSON.parse(petlistJSON);
 
-  //   if(petlist === null){
-  //    	petlist = [];
-  //   }
-
-  //   petlist.push(petSearch);
-  //   petlistJSON = JSON.stringify(petlist);
-  //   localStorage.setItem(petlist, petlistJSON);
-  // }
+    if (petlist == null) {
+      petlist = [];
+    }
+    petlist.push(petSearch)
+    petlistJSON = JSON.stringify(petlist)
+    console.log(petlistJSON)
+    localStorage.setItem("petlist", petlistJSON)
+    
+  }
 })
 
 
