@@ -14,16 +14,17 @@ $(document).ready(() => {
                     <p class="pet-card-breed"><b>Primary Breed:</b> ${currentCat.breeds.primary}</p>
                     <p class="pet-card-color"><b>Primary Color:</b> ${currentCat.colors.primary} </p>
                     <p class="pet-card-age"><b>Age:</b> ${currentCat.age}</p>
-                    <a class="pet-card-pf-listing" href="${currentCat.url}">Go to the Original PetFinder Listing</a>
-                <button type="button" class="remove-button">Remove!</button>
+                    <a class="pet-card-pf-listing" target="_blank" href="${currentCat.url}">Go to the Original PetFinder Listing</a>
+                    <br />
+                    <button type="button" class="remove-button btn btn-dark">Remove</button>
                 </div>
             </div>`
-
         })
+
         return petHTMLs.join("");
     }
-    $(".pet-pals-container").html(renderPetPals(petlist));
 
+    $(".pet-pals-container").html(renderPetPals(petlist));
 })
 
 let noPhotoAvail = "images/no_image.png";

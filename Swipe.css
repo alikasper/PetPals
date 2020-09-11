@@ -1,7 +1,24 @@
+#swipe-header {
+    background-image: url(images/gradient.jpeg);
+    background-size: cover;
+    color: white;
+    padding: 25px;
+}
+
+.ui-widget-content {
+    border: 0 !important;
+}
+
 .submit_button {
     width: 75px;
     height: auto;
     border: 0;
+}
+
+.pet-container {
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 25px;
 }
 
 #draggable img {
@@ -20,4 +37,11 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
+}
+
+.pet-card-img-top {
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 0 auto 15px auto;
+    width: 250px;
 }

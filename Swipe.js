@@ -53,8 +53,10 @@ $().ready(() => {
 
   function renderPet(petSearch) {
     $("#draggable").append(`
-    <img src="${imageSrc(petSearch.photos)}"/>
-    <h3>${petSearch.name}</h3>
+    <div class="pet-container">
+      <img class="pet-card-img-top" src="${imageSrc(petSearch.photos)}"/>
+      <h3>${petSearch.name}</h3>
+    </div>
     `); 
   }
 
