@@ -2,7 +2,7 @@
     background-image: url(images/gradient.jpeg);
     background-size: cover;
     color: white;
-    padding: 25px;
+    padding: 50px 25px 25px 25px;
 }
 
 .ui-widget-content {
