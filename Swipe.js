@@ -1,6 +1,6 @@
 let petSearch; 
 let catsFromAPI = [];
-let petFinderURL = "https://api.petfinder.com/v2/animals?type=cat&status=adoptable&?limit=50";
+let petFinderURL = "https://api.petfinder.com/v2/animals?type=cat&status=adoptable&?limit=100";
 
 $().ready(() => {
   function catSwipe() {
