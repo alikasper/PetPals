@@ -1,46 +1,54 @@
 let petSearch; 
 let catsFromAPI = [];
-let petFinderURL = "https://api.petfinder.com/v2/animals?type=cat&status=adoptable&?limit=20";
+let petFinderURL = "https://api.petfinder.com/v2/animals?type=cat&status=adoptable&?limit=50";
 
 $().ready(() => {
-  console.log("Jquery is loading...");
-
   function catSwipe() {
-    if (catsFromAPI.length < 1) {
-      authFunc()
-      .then((data) => {
-          let token = data.access_token
-          fetch(petFinderURL, {
-              method: 'get',
-              headers: {
-                  "Authorization": `Bearer ${token}`
-              }
-          })
-          .then(response => response.json())
-          .then((data) => {
-            // console.log("animals: " + data.animals);
-            data.animals.map((x) => {
-              if(x.photos.length > 0){
-                catsFromAPI.push(x)
-              }
-            });
-
-            if (catsFromAPI.length > 0) {
-              petSearch = catsFromAPI.pop()
-              renderPet(petSearch);
-            }
-            
-            let paginationURL = data.pagination._links["next"].href;
-            buildPetFinderURL(paginationURL);
-            console.log("just switched to a new page");
-
-          })
-      })
+    if (!catsFromAPI.length) {
+      loadPetPhotos();
+      // .then(() => {
+      //   while (catsFromAPI.length < 1) {
+      //   loadPetPhotos();
+      //  }
+      // })
     }
     else {
       petSearch = catsFromAPI.pop();
       renderPet(petSearch);
     }
+  }
+
+  catSwipe(); 
+
+  function loadPetPhotos() {
+    authFunc()
+    .then((data) => {
+        let token = data.access_token
+        fetch(getPetFinderSearchURL(), {
+            method: 'get',
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        })
+        .then(response => response.json())
+        .then((data) => {
+          data.animals.map((x) => {
+            if(x.photos.length > 0){
+              catsFromAPI.push(x)
+            }
+          });
+
+          if (catsFromAPI.length > 0) {  //this is when all listings don't have photos
+            petSearch = catsFromAPI.pop()
+            renderPet(petSearch);
+          }
+          
+          let paginationURL = data.pagination._links["next"].href; //this is the next page after what the url fetched
+          setPetFinderSearchURL(paginationURL);
+          console.log("just switched to a new page");
+
+        })
+    })
   }
 
   function renderPet(petSearch) {
@@ -50,10 +58,19 @@ $().ready(() => {
     `); 
   }
 
-  function buildPetFinderURL(url) {
-    let baseURL = "https://api.petfinder.com";
-    petFinderURL = baseURL.concat(url);
+  function getPetFinderSearchURL() {
+    localStorage.getItem(petFinderURL);
+    return petFinderURL;
+    
   }
+
+  function setPetFinderSearchURL(urlPath) {
+    let baseURL = "https://api.petfinder.com";
+    petFinderURL = baseURL.concat(urlPath);
+    localStorage.setItem('petFinderURL', petFinderURL);
+  }
+
+  $("#draggable").draggable({axis: "x"});
 
   $("#submit_no").on("click", () => {
     $("#draggable").empty();
@@ -68,11 +85,7 @@ $().ready(() => {
     console.log("YES")
   })
 
-  catSwipe();
-  $("#draggable").draggable({axis: "x"});
-
   function saveToPetList(petSearch) {
-
     var petlistJSON = localStorage.getItem('petlist');
     var petlist = JSON.parse(petlistJSON);
 
@@ -81,9 +94,7 @@ $().ready(() => {
     }
     petlist.push(petSearch)
     petlistJSON = JSON.stringify(petlist)
-    console.log(petlistJSON)
     localStorage.setItem("petlist", petlistJSON)
-    
   }
 })
 
