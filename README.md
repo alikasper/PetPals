@@ -1,3 +1,3 @@
 # PetPals
-DigitalCrafts Group Project
-### Rudy wuz here
+This is a test
+
