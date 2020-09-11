@@ -16,7 +16,7 @@ $(document).ready(() => {
                     <p class="pet-card-age"><b>Age:</b> ${currentCat.age}</p>
                     <a class="pet-card-pf-listing" target="_blank" href="${currentCat.url}">Go to the Original PetFinder Listing</a>
                     <br />
-                    <button type="button" class="remove-button btn btn-dark">Remove</button>
+                    <button type="button" class="remove-button btn btn-dark" onclick="removeCard(this);">Remove</button>
                 </div>
             </div>`
         })
