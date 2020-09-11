@@ -1,10 +1,10 @@
-# PetPals   [![Build Status][travis-badge]][travis-link] [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/) [![GitHub contributors](https://img.shields.io/github/contributors/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/contributors/) [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
+# PetPals   [![Build status](https://img.shields.io/badge/build-passing-<COLOR>.svg)](https://shields.io/) [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/) [![GitHub contributors](https://img.shields.io/github/contributors/Naereen/StrapDown.js.svg)](https://github.com/alikasper/PetPals/graphs/contributors) [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
 
 ```
 "The fur babies of your dreams!"
 ```
 ## Project Explanation
-Recognizing the need for positive reinforcement in these difficult times, our team has developed an awesome web application that enables our users select and read different quotes to fit their daily moods.
+As humans navigate their ever-changing daily realities and struggles, the need for companionship could not be more felt. PetPals is our solution that connects our homeless furry clients with loving and caring humans.
 > Your new **best friend** is just a swipe away! :wink:
 > The more the merrier? Just swipe right again! :sunglasses:
 
@@ -19,10 +19,19 @@ Recognizing the need for positive reinforcement in these difficult times, our te
     - [GoogleMaps](https://developers.google.com/maps/apis-by-platform)
 
 ## Challenges We Encountered 
+- Caitlin
+    - " "
+- Ali
+    - " "
+- Rudy 
+    - " "
+- Daisy
+    - " "
 
 ## Project Demo And Code Highlights
 Demo
 [![PetPals][https://giphy.com/gifs/H1AilPXNelHtktxeUl]]
+
 Description of Highlight 1
 ```bash
 Code goes here
