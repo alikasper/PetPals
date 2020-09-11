@@ -5,6 +5,19 @@
 
 .pet-card {
     margin: 40px;
-    border: 3px solid black;
-    text-align: center;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+}
+
+.pet-card-img-top {
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 0 auto 15px auto;
+    width: 250px;
+}
+
+.remove-button {
+    margin-top: 15px;
 }
