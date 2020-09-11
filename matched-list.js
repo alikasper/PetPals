@@ -4,9 +4,9 @@ $(document).ready(() => {
 
   // console.log(petlist)
 
-    function renderPetPals(petlist) {
+    function renderPetPals(array) {
 
-        let petHTMLs = petlist.map((currentCat) => {
+        let petHTMLs = array.map((currentCat) => {
             return `<div class="pet-card" style="width: 300px;">
                 <img class="pet-card-img-top" src="${imageSrc(currentCat.photos)}" alt="Pet card image cap" height="300px" width="200px">
                 <div class="pet-card-body">
@@ -27,13 +27,3 @@ $(document).ready(() => {
 
     $(".pet-pals-container").html(renderPetPals(petlist));
 })
-
-let noPhotoAvail = "images/no_image.png";
-let imageSrc = function(array) {
-    if (array.length === 0) {
-        return noPhotoAvail;
-    }
-    else {
-        return array[0].full;
-    }
-}
