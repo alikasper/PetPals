@@ -4,8 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Find Your PetPal</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
@@ -14,61 +19,96 @@
     <link rel="stylesheet" href="Swipe.css" />
   </head>
   <body>
-
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">
-            <img src="images/paw.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-            PetPals
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="Swipe.html">Meet</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="matched-list.html">Matches</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="map.html">Map</a>
-            </li>
-          </ul>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">
+        <img
+          src="images/paw.png"
+          width="30"
+          height="30"
+          class="d-inline-block align-top"
+          alt=""
+          loading="lazy"
+        />
+        PetPals
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="Swipe.html">Meet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="matched-list.html">Matches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="map.html">Map</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
-    <div id="page-container">  
+    <div id="page-container">
       <div id="content-wrap">
-
         <div id="swipe-header">
           <div class="col-12 header text-center">
-            <img class="mx-auto custom-logo" src="images/meet_logo_paw.png" height="200">
-            <h5>If you like a pet, swipe the image to the right and it will be added to your match list. <br />If not, swipe the image left to see a new pet.</h5>
+            <img
+              class="mx-auto custom-logo"
+              src="images/meet_logo_paw.png"
+              height="200"
+            />
+            <h5>
+              If you like a pet, swipe the image to the right and it will be
+              added to your match list. <br />If not, swipe the image left to
+              see a new pet.
+            </h5>
           </div>
         </div>
 
         <div class="container swipe-cont">
-
-          <div class = "no-container">
-            <input type = "image" img src="images/red_ex.png" id = "submit_no" class ="submit_button" name = "red_ex"  />
+          <div class="no-container">
+            <input
+              type="image"
+              img
+              src="images/red_ex.png"
+              id="submit_no"
+              class="submit_button"
+              name="red_ex"
+            />
           </div>
-          
-          <div id="draggable" class="ui-widget-content">
 
-          </div>
+          <div id="draggable" class="ui-widget-content"></div>
 
           <div class="yes-container">
-            <input type = "image" src="images/green_check.png" id = "submit_yes" class ="submit_button" name = "green_check"/>
+            <input
+              type="image"
+              src="images/green_check.png"
+              id="submit_yes"
+              class="submit_button"
+              name="green_check"
+            />
           </div>
-        
         </div>
 
         <div id="footer">
-          <img class="footer-logo" src="images/paw.png" width="35px">
-          <p id="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script> PetPals</p>
+          <img class="footer-logo" src="images/paw.png" width="35px" />
+          <p id="copyright">
+            Copyright &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            PetPals
+          </p>
         </div>
-
       </div>
     </div>
 

@@ -1,47 +1,49 @@
 #swipe-header {
-    background-image: url(images/gradient.jpeg);
-    background-size: cover;
-    color: white;
-    padding: 25px;
+  background-image: url(images/gradient.jpeg);
+  background-size: cover;
+  color: white;
+  padding: 25px;
 }
 
 .ui-widget-content {
-    border: 0 !important;
+  border: 0 !important;
 }
 
 .submit_button {
-    width: 75px;
-    height: auto;
-    border: 0;
+  width: 75px;
+  height: auto;
+  border: 0;
 }
 
 .pet-container {
-    background-color: lightgray;
-    border-radius: 10px;
-    padding: 25px;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 25px;
 }
 
 #draggable img {
-    border-radius: 15;
-    max-width: 90%;
-    height: auto;
+  border-radius: 15;
+  max-width: 90%;
+  height: auto;
 }
 
-#draggable, .no-container, .yes-container {
-    width: 40%;
-    text-align: center;
+#draggable,
+.no-container,
+.yes-container {
+  width: 40%;
+  text-align: center;
 }
 
 .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: nowrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 .pet-card-img-top {
-    border: 2px solid white;
-    border-radius: 5px;
-    margin: 0 auto 15px auto;
-    width: 250px;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 0 auto 15px auto;
+  width: 250px;
 }
