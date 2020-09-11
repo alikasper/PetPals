@@ -5,12 +5,13 @@ let petFinderURL = "https://api.petfinder.com/v2/animals?type=cat&status=adoptab
 $().ready(() => {
   function catSwipe() {
     if (!catsFromAPI.length) {
-      loadPetPhotos();
-      // .then(() => {
-      //   while (catsFromAPI.length < 1) {
-      //   loadPetPhotos();
-      //  }
-      // })
+      loadPetPhotos()
+      .then((result) => {
+        console.log(result);
+        if (!result) {
+          catSwipe();
+        }
+      })
     }
     else {
       petSearch = catsFromAPI.pop();
@@ -21,10 +22,10 @@ $().ready(() => {
   catSwipe(); 
 
   function loadPetPhotos() {
-    authFunc()
+    return authFunc()
     .then((data) => {
         let token = data.access_token
-        fetch(getPetFinderSearchURL(), {
+        return fetch(getPetFinderSearchURL(), {
             method: 'get',
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -38,15 +39,17 @@ $().ready(() => {
             }
           });
 
-          if (catsFromAPI.length > 0) {  //this is when all listings don't have photos
-            petSearch = catsFromAPI.pop()
-            renderPet(petSearch);
-          }
-          
           let paginationURL = data.pagination._links["next"].href; //this is the next page after what the url fetched
           setPetFinderSearchURL(paginationURL);
           console.log("just switched to a new page");
 
+          if (catsFromAPI.length > 0) {  //this is when all listings don't have photos
+            petSearch = catsFromAPI.pop();
+            renderPet(petSearch);
+            return true;
+          }
+
+          return false;
         })
     })
   }

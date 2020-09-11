@@ -9,9 +9,9 @@ img.custom-logo {
 }
 
 .logoCont {
-  background-image: url("images/cat.jpg");
-  height: 650px;
-  padding: 75px 50px 50px 50px;
+    background-image: url("images/cat.jpg");
+    height: 650px;
+    padding: 95px 50px 50px 40px;
 }
 
 #cat-fact-cont {

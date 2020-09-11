@@ -1,3 +1,3 @@
-function removeCard {
-    console.log("Please work")
+function removeCard(btn){
+    ((btn.parentNode).parentNode.parentNode).removeChild(btn.parentNode.parentNode);
 }

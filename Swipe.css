@@ -1,8 +1,15 @@
 #swipe-header {
+<<<<<<< HEAD
   background-image: url(images/gradient.jpeg);
   background-size: cover;
   color: white;
   padding: 25px;
+=======
+    background-image: url(images/gradient.jpeg);
+    background-size: cover;
+    color: white;
+    padding: 50px 25px 25px 25px;
+>>>>>>> development
 }
 
 .ui-widget-content {
