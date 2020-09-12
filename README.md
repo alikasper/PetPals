@@ -20,30 +20,14 @@ As humans navigate their ever-changing daily realities and struggles, the need f
 
 ## Challenges We Encountered 
 - Caitlin
-    - " "
+    - TBD
 - Ali
-    - " "
+    - TBD
 - Rudy 
-    - " "
+    - TBD
 - Daisy
-    - " "
+    - TBD
 
-## Project Demo And Code Highlights
-Demo
-[![PetPals](https://giphy.com/gifs/H1AilPXNelHtktxeUl)]
-
-Description of Highlight 1
-```bash
-Code goes here
-
-...
-```
-Description of Highlight 2
-```bash
-Code goes here
-
-...
-```
 ## Meet The Devs! (C.A.R.D)
 | **Caitlin Crawford** | **Ali Kasper** | **Rudy Saavedra**| **Daisy Umotong** |
 | :-------------: |:-----------------:| :----------------:| :----------------:|
