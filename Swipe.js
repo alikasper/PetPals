@@ -55,7 +55,7 @@ $().ready(() => {
   }
 
   function renderPet(petSearch) {
-    $("#draggable").append(`
+    $("#draggable").html(`
     <div class="pet-container">
       <img class="pet-card-img-top" src="${imageSrc(petSearch.photos)}"/>
       <h3>${petSearch.name}</h3>
@@ -79,6 +79,7 @@ $().ready(() => {
 
   $("#submit_no").on("click", () => {
     $("#draggable").empty();
+    $("#draggable").html("<p>Fetching your potential forever friend...</p>");
     catSwipe();
     console.log("NO")
   })
@@ -86,6 +87,7 @@ $().ready(() => {
   $("#submit_yes").on("click", () => {
     saveToPetList(petSearch);
     $("#draggable").empty();
+    $("#draggable").html("<p>Fetching your potential forever friend...</p>");
     catSwipe();
     console.log("YES")
   })

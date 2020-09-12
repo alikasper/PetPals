@@ -14,8 +14,10 @@
 .pet-card-img-top {
     border: 2px solid white;
     border-radius: 5px;
+    background: white;
     margin: 0 auto 15px auto;
     width: 250px;
+    object-fit: cover;
 }
 
 .remove-button {
