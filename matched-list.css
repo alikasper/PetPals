@@ -1,25 +1,25 @@
 .pet-pals-container {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .pet-card {
-    margin: 40px;
-    background-color: lightgray;
-    border-radius: 10px;
-    padding: 25px;
-    text-align: left;
+  margin: 40px;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: left;
 }
 
 .pet-card-img-top {
-    border: 2px solid white;
-    border-radius: 5px;
-    background: white;
-    margin: 0 auto 15px auto;
-    width: 250px;
-    object-fit: cover;
+  border: 2px solid white;
+  border-radius: 5px;
+  background: white;
+  margin: 0 auto 15px auto;
+  width: 250px;
+  object-fit: cover;
 }
 
 .remove-button {
-    margin-top: 15px;
+  margin-top: 15px;
 }
