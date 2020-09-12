@@ -37,8 +37,8 @@ $().ready(() => {
               position: data.results[0].geometry.location,
               map: map,
               title: currentanimal.name,
-              // label: currentanimal.name.charAt(0),
-              icon: currentanimal.photos[0].small,
+              label: currentanimal.name.charAt(0),
+            //   icon: currentanimal.photos[0].small,
               animation: google.maps.Animation.DROP
             });
           });
