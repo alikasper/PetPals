@@ -75,7 +75,40 @@ $().ready(() => {
     localStorage.setItem('petFinderURL', petFinderURL);
   }
 
-  $("#draggable").draggable({axis: "x"});
+  $("#draggable").draggable({
+    axis: "x",
+    revert: true
+  });
+
+  $("#submit_no").droppable({
+    accept: "#draggable",
+    over: function( event, ui ) {
+      console.log(event);
+      console.log(ui);
+      $("#draggable").empty();
+      $("#draggable").html("<p>Fetching your potential forever friend...</p>");
+      catSwipe();
+      console.log("NO")
+    }
+  });
+
+  $( "#submit_no" ).on( "dropover", function( event, ui ) {} );
+
+  $("#submit_yes").droppable({
+    accept: "#draggable",
+    over: function( event, ui ) {
+        console.log(event);
+        console.log(ui);
+        saveToPetList(petSearch);
+        $("#draggable").empty();
+        $("#draggable").html("<p>Fetching your potential forever friend...</p>");
+        catSwipe();
+        console.log("YES")
+    }
+  });
+
+  $( "#submit_yes" ).on( "dropover", function( event, ui ) {
+  });
 
   $("#submit_no").on("click", () => {
     $("#draggable").empty();
