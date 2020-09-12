@@ -15,7 +15,7 @@ As humans navigate their ever-changing daily realities and struggles, the need f
     - [Bootstrap](https://getbootstrap.com/)
 - Three Remote API's using AJAX: 
     - [PetFinder](https://www.petfinder.com/developers/)
-    - [CatAPI](https://thecatapi.com/)
+    - [CatFactsAPI](https://catfact.ninja/)
     - [GoogleMaps](https://developers.google.com/maps/apis-by-platform)
 
 ## Challenges We Encountered 
