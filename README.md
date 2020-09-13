@@ -42,6 +42,6 @@ As humans navigate their ever-changing daily realities and struggles, the need f
 
 ## See our project in ACTION!
 
-<a href="#" target="_blank"> ` PetPals ` </a>
+<a href="https://petpalsinc.surge.sh/" target="_blank"> ` PetPals ` </a>
 
 > © Copyright PetPals 2020.
